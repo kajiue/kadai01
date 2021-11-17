@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/action_to_passwordEditFragment">
+
+    <fragment
+        android:id="@+id/action_to_passwordEditFragment"
+        android:name="com.example.kadai01.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_passwordEditFragment"
+            app:destination="@id/passwordEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.kadai01.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/action_to_passwordEditFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_passwordEditFragment"
+            app:destination="@id/passwordEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordEditFragment"
+        android:name="com.example.kadai01.PasswordEditFragment"
+        android:label="fragment_password_edit"
+        tools:layout="@layout/fragment_password_edit" />
+</navigation>
